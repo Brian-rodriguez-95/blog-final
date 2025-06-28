@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Bandeja de entrada</h2>
+  {% if messages %}
+    <ul class="list-group">
+      {% for mensaje in messages %}
+        <li class="list-group-item">
+          <strong>{{ mensaje.sender.username }}</strong> te escribió:<br>
+          {{ mensaje.content }}<br>
+          <small class="text-muted">{{ mensaje.created_at|date:"d/m/Y H:i" }}</small>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No tenés mensajes todavía.</p>
+  {% endif %}
+{% endblock %}
