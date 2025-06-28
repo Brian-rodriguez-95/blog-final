@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('pages/', include('pages.urls')),
     path('accounts/', include('accounts.urls')),
-    path('mensajes/', include('messenger.urls')),
+    path('mensajes/', include('mensajeria.urls')),
+    path('', include('pages.urls')),
 ]
 
 # Para servir archivos media en modo desarrollo

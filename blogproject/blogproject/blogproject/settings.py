@@ -39,9 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages',
     'accounts',
-    'messenger',
+    'mensajeria.apps.MensajeriaConfig',
     'ckeditor',
-    'messenger',
 
 
 ]

@@ -72,3 +72,8 @@ class PageCreateView(LoginRequiredMixin, CreateView):
     template_name = 'pages/page_form.html'
     form_class = PageForm
     success_url = reverse_lazy('page_list')
+
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'pages/home.html')
